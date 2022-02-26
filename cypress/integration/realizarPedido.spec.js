@@ -7,14 +7,14 @@ describe("Acessa a pagina principal", () => {
   });
 });
 
-describe("Validar login", () => {
+describe("Validar login com dados corretos", () => {
   it("Informa login e senha inválido e verifca mensagem de erro", function () {
     LoginPage.go();
     LoginPage.loginInvalido();
   });
 });
 
-describe("Login", () => {
+describe("Valida Login dados incorretos", () => {
   it("Realiza o login com dados corretos", function () {
     LoginPage.go();
     LoginPage.fazerLogin();
@@ -30,6 +30,7 @@ describe("Realiza o Pedido", () => {
 describe("Fazer o check-out", () => {
   it("Verifica itens da compra", function () {
     realizarPedidoPage.fazerChekout();
+    
     
   });
 });

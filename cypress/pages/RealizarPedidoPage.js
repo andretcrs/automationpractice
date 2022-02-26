@@ -11,11 +11,10 @@ class RealizarPedidoPage {
   fazerChekout(){
       cy.get(".btn.btn-default.button.button-medium").click()
       cy.get(".navigation_page").should("have.text", "Your shopping cart")
-      cy.get(".step_current > span").should(" Summary");
-
-
-      
-
+      cy.get(".cart_description > .product-name > a").should("have.text","Faded Short Sleeve T-shirts")
+      cy.get(".cart_description > :nth-child(3) > a").should("have.text","Color : Orange, Size : S")
+      cy.get(".label").should("have.text", "In stock");
+      cy.get(".cart_navigation > .button > span").click();
   }
 }
 export default new RealizarPedidoPage
